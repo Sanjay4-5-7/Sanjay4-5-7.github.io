@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Praveen S | Cyber Security Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #00ff9d;
+            --accent-dim: rgba(0, 255, 157, 0.15);
+            --text: #ffffff;
+            --text-dim: #a0a0a0;
+            --card: rgba(20, 20, 20, 0.8);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); overflow-x: hidden; }
+
+        /* Particle Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #111 0%, #050505 100%);
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* Floating Navigation */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            background: var(--card);
+            backdrop-filter: blur(10px);
+            padding: 10px 25px;
+            border-radius: 50px;
+            border: 1px solid var(--accent-dim);
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Add this to your <style> tag */
+        nav a.active { 
+            color: var(--accent) !important; 
+            background: var(--accent-dim);
+            box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+            border: 1px solid var(--accent);
+            border-radius: 20px; /* Optional: makes the highlight rounded */
+        }
+
+        nav a { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .glitch-text {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            background: linear-gradient(to bottom, #fff, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .typing-container {
+            font-family: monospace;
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Section Styling */
+        section { padding: 100px 0; }
+        h2 { font-size: 2rem; margin-bottom: 40px; display: flex; align-items: center; gap: 15px; }
+        h2::after { content: ""; height: 1px; flex: 1; background: var(--accent-dim); }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
+        }
+
+        /* Timeline for B.Tech Education */
+        .timeline { border-left: 2px solid var(--accent-dim); padding-left: 30px; margin-left: 10px; }
+        .timeline-item { position: relative; margin-bottom: 40px; }
+        .timeline-item::before {
+            content: ""; position: absolute; left: -41px; top: 5px;
+            width: 20px; height: 20px; background: var(--bg);
+            border: 2px solid var(--accent); border-radius: 50%;
+        }
+
+        /* Grid for Skills */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+        .skill-tag {
+            display: inline-block;
+            background: var(--accent-dim);
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(0,255,157,0.3);
+        }
+
+        /* Project Hover Effect */
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 15px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer { text-align: center; padding: 50px; opacity: 0.5; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .glitch-text { font-size: 2.5rem; }
+            nav { width: 90%; justify-content: space-around; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <nav>
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+</nav>
+
+
+    <div class="container">
+        <header id="home">
+            <h1 class="glitch-text">Sanjay Praveen S</h1>
+            <div class="typing-container">
+                > <span id="typing"></span><span class="cursor">|</span>
+            </div>
+            <div style="margin-top: 30px; display: flex; gap: 20px;">
+                <a href="#" style="color:white"><i data-lucide="github"></i></a>
+                <a href="#" style="color:white"><i data-lucide="linkedin"></i></a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>01. Mission Objective</h2>
+            <div class="card">
+                <p>I am a B.Tech student dedicated to mastering the art of Cyber Security. My goal is to build impenetrable systems and defend digital frontiers. Currently focusing on <b>Penetration Testing</b> and <b>Security Operations (SOC)</b>.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>02. Tech Arsenal</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Red Teaming</h3>
+                    <p style="color:var(--text-dim); margin-bottom:15px;">Offensive security tools and tactics.</p>
+                    <span class="skill-tag">Metasploit</span>
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">Nmap</span>
+                    <span class="skill-tag">Kali Linux</span>
+                </div>
+                <div class="card">
+                    <h3>Development</h3>
+                    <p style="color:var(--text-dim); margin-bottom:15px;">Building secure automation scripts.</p>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>03. Background</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>B.Tech in Computer Science</h3>
+                    <p style="color:var(--accent)">[Your University Name] • 2022 — 2026</p>
+                    <p style="color:var(--text-dim)">Focused on Network Security, Operating Systems, and Data Structures. Currently maintaining a GPA of [X.X].</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Cybersecurity Virtual Intern</h3>
+                    <p style="color:var(--accent)">[Company Name] • 2023</p>
+                    <p style="color:var(--text-dim)">Analyzed security logs and assisted in vulnerability patching for enterprise applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>04. Tactical Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Keylogger Detector</h3>
+                    <p style="color:var(--text-dim)">A Python-based utility that monitors system hooks to detect unauthorized keystroke logging.</p>
+                    <a href="#" class="project-link">View Source <i data-lucide="external-link" style="width:16px; margin-left:5px;"></i></a>
+                </div>
+                <div class="card">
+                    <h3>Packet Sniffer</h3>
+                    <p style="color:var(--text-dim)">Custom-built network sniffer using Scapy to analyze raw traffic and extract unencrypted credentials.</p>
+                    <a href="#" class="project-link">View Source <i data-lucide="external-link" style="width:16px; margin-left:5px;"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <p>Ready to secure the future?</p>
+            <h2 style="justify-content: center; border:none;">sanjay@email.com</h2>
+            <p>&copy; 2024 Sanjay Praveen S. | Built with Stealth.</p>
+        </footer>
+    </div>
+
+    <script>
+
+        // --- SCROLL HIGHLIGHT LOGIC ---
+const sections = document.querySelectorAll("section, header");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        // Adjust the '- 150' to control when the highlight switches
+        if (pageYOffset >= sectionTop - 150) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+        }
+    });
+});
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Particles.js Configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80 },
+                color: { value: '#00ff9d' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.2 },
+                size: { value: 2 },
+                line_linked: { enable: true, distance: 150, color: '#00ff9d', opacity: 0.1, width: 1 },
+                move: { enable: true, speed: 2 }
+            },
+            interactivity: {
+                events: { onhover: { enable: true, mode: 'grab' } }
+            }
+        });
+
+        // Typing Effect
+        const text = "Aspiring Cybersecurity Professional";
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                document.getElementById("typing").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, 100);x
+            }
+        }
+        type();
+
+        // Scroll Reveal
+        ScrollReveal().reveal('.card', { delay: 200, distance: '50px', origin: 'bottom', interval: 100 });
+        ScrollReveal().reveal('h2', { delay: 100, origin: 'left', distance: '30px' });
+    </script>
+</body>
+</html>
